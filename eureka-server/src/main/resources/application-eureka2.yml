@@ -1,0 +1,16 @@
+server:
+  application:
+    name: eureka-cluster
+  port: 8762  # 当前服务的端口号
+  profiles: eureka2
+eureka:
+  instance:
+    hostname: eureka2
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka/
+    #当前服务不需要到Eureka服务上注册，自身就是服务
+    #表示是否注册自身到eureka服务器
+    register-with-eureka: true
+    #是否从eureka上获取注册信息
+    fetch-registry: true

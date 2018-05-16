@@ -1,0 +1,23 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+server:
+  port: 8001
+spring:
+  application:
+    name: service-ribbon
+ # zipkin:
+ #  base-url: http://127.0.0.1:9411
+ #feign:
+ # hystrix:
+ #  enabled: true
+
+# 修改负载策略为随机
+#service-ribbon:
+#  bibbon:
+#    NFLoadBalancerRuleClassName:com.netflix.loadbalancer.RandomRule
+
+
+
+

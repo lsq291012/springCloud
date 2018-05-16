@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-cluster
+eureka:
+  client:
+    #当前服务不需要到Eureka服务上注册，自身就是服务
+    #表示是否注册自身到eureka服务器
+    register-with-eureka: false
+    #是否从eureka上获取注册信息
+    fetch-registry: false
+  server:
+    enable-self-preservation: true #自我保护机制。Eureka Server在运行期间，会统计心跳失败的比例在15分钟之内是否低于85%，
